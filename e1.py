@@ -17,15 +17,23 @@ class Keyboard():
 
             filtered_button.pressed += 1
 
-            return filtered_button.key
+            print(filtered_button.key)
 
         except IndexError:
             print("No button at that position!")
 
-    def typing(self, typing_input: list[int]) -> None:
-        # * This method didn't used `press()` because it already prints something
-        print(''.join([i.key for i in self.buttons
-                       if [i.pos == j for j in typing_input]]))
+    def typing(self, typing_input: list) -> None:
+        # * This isn't the most beautiful solution, but it works.
+        try:
+            phrase = ""
+            for i in typing_input:
+                filtered_button = [j for j in self.buttons if j.pos == i][0]
+                phrase += filtered_button.key
+
+            print(phrase)
+
+        except IndexError:
+            print("No button at that position!")
 
 
 if __name__ == '__main__':
