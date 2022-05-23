@@ -28,10 +28,11 @@ if __name__ == '__main__':
     # Default values
     print(with_no_args.__str__())
 
-    for param in params:
-        print(f"{param}: {params[param]}")
-        # with_no_args.__setattr__(param,
-        #                          int(params[param]) if param != 'name' or param != 'gender' else params[param])
+    with_no_args.name = 'John'
+    with_no_args.gender = 'M'
+    with_no_args.age = 18
+    with_no_args.height = 1.75
+    with_no_args.weight = 80
 
     for person in [all_params, without_weight_and_height, with_no_args]:
         print(person.__str__())

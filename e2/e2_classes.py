@@ -37,7 +37,7 @@ class Person:
             print('Unprocessable input')
 
     def __str__(self) -> str:
-        return f"Name: {self.name} Age: {self.age} Height/Weight: {self.height}/{self.weight}"
+        return f"Name: {self.name} Age: {self.age} Height/Weight: {self.height}|{self.weight}"
 
     def findIMC(self):
         imc = self.weight / (self.height ** 2)
