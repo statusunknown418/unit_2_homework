@@ -4,6 +4,7 @@ from Movie import Movie
 from Spectator import Spectator
 from Theater import Theater
 
+# Very useful library heavily used in Web Development (my area of expertise with Typescript) to simulate random real data
 fake = Faker()
 
 # Simulate a populated theater
